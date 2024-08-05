@@ -30,6 +30,10 @@ kotlin {
     }
     
     sourceSets {
+
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
+        }
         
         androidMain.dependencies {
             implementation(compose.preview)
@@ -89,5 +93,7 @@ android {
 }
 dependencies {
     implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.ui.graphics.android)
+    implementation(libs.androidx.ui.graphics.desktop)
 }
 
